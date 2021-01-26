@@ -1,7 +1,7 @@
 # Simple-Loader-Framework
 <h1>FRAMEWORK USAGE:</h1>
 
-<h3>INPUT REQEST INFO IN UTILS.H</h3>
+<h3>INPUT REQUEST INFO IN UTILS.H</h3>
 </br></br>
 
 <h4>Menu menu("Title")</h4>
