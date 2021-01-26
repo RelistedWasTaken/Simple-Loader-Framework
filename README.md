@@ -56,3 +56,4 @@ else if (*result == t_ + f_) { menu.add_item_string("key correct."); }</br>
 <h1>EXAMPLE OUTPUT:</h1>
 successful output:
 <img src="https://user-images.githubusercontent.com/73892791/105888887-d9cf1280-600d-11eb-8e89-c52c0ebe925f.png" width="80%"></img> 
+<img src="https://user-images.githubusercontent.com/73892791/105889230-3d594000-600e-11eb-93c5-ea1138411143.png" width="80%"></img> 
