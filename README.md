@@ -41,16 +41,14 @@
 <h4>is_key_allowed_insecure()	</h4>				
 check if given key is allowed returns true or false
 usage:</br>
-```
+</br>
 if (!is_key_allowed_insecure(key_input)) { menu.add_item_string("wrong key."); return 0; }</br>
 else { menu.add_item_string("key correct."); }</br>
-```
 
 </br></br>
 <h4>is_key_allowed_secure()</h4>						
 usage: (i know its bad)</br>
-```
+</br>
 is_key_allowed_secure(key_input)</br>
 if (*result == t_ - f_) { menu.add_item_string("wrong key."); return 0; }</br>
 else if (*result == t_ + f_) { menu.add_item_string("key correct."); }</br>
-```
