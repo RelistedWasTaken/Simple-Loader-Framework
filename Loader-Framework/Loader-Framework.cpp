@@ -16,7 +16,7 @@ int main()
 		pause_until_leave();
 	}
 
-	if (!is_key_allowed_insecure(key_input)) { menu.add_item_string("wrong key."); pause_until_leave(); return 0; }
+	if (!is_key_allowed_insecure(key_input)) { menu.add_item_string("wrong key."); pause_until_leave(); }
 	else { menu.add_item_string("key correct."); }
 
 	std::cout << "[+] Website up, proceeding\n";
