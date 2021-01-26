@@ -40,8 +40,11 @@
 <h4>get_user_name()</h4>
   returns current user name as a string value
   </br></br>
+  
  <h4>pause_until_leave()</h4>
  pauses the app and exits it when a key is pressed
+   </br></br>
+   
 <h4>is_key_allowed_insecure()	</h4>				
 check if given key is allowed returns true or false
 usage:</br>
@@ -57,6 +60,7 @@ is_key_allowed_secure(key_input)</br>
 if (*result == t_ - f_) { menu.add_item_string("wrong key."); return 0; }</br>
 else if (*result == t_ + f_) { menu.add_item_string("key correct."); }</br>
 </br></br>
+
 <h1>EXAMPLE OUTPUT:</h1>
 successful output:
 <img src="https://user-images.githubusercontent.com/73892791/105888887-d9cf1280-600d-11eb-8e89-c52c0ebe925f.png" width="50%"></img> 
