@@ -40,7 +40,8 @@
 <h4>get_user_name()</h4>
   returns current user name as a string value
   </br></br>
-  
+ <h4>pause_until_leave()</h4>
+ pauses the app and exits it when a key is pressed
 <h4>is_key_allowed_insecure()	</h4>				
 check if given key is allowed returns true or false
 usage:</br>
