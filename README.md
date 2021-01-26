@@ -52,3 +52,7 @@ usage: (i know its bad)</br>
 is_key_allowed_secure(key_input)</br>
 if (*result == t_ - f_) { menu.add_item_string("wrong key."); return 0; }</br>
 else if (*result == t_ + f_) { menu.add_item_string("key correct."); }</br>
+</br></br>
+<h1>EXAMPLE OUTPUT:</h1>
+successful output:
+![output_1](https://user-images.githubusercontent.com/73892791/105888007-b22b7a80-600c-11eb-97e6-0cf979edcff1.png)
