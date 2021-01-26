@@ -1,6 +1,7 @@
 #pragma once
 #include "includes.h"
 #include <sstream>
+#include <conio.h>
 #include <Lmcons.h>
 #include <vector>
 
@@ -82,4 +83,9 @@ void DebugMessage(const char* message) {
 #ifdef _DEBUG
 	std::cout << message;
 #endif
+}
+
+void pause_until_leave() {
+	_getch();
+	exit(1);
 }
