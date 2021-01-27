@@ -10,6 +10,6 @@ int ping_old(const std::string& dest);
 
 bool ping_new(const std::string& dest);
 
-std::string replaceAll(std::string subject, const std::string& search, const std::string& replace);
-
 std::string DownloadString(std::string URL);
+
+std::string replaceAll(std::string subject, const std::string& search, const std::string& replace);

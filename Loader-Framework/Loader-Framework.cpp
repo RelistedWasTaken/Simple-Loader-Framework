@@ -2,8 +2,7 @@
 #include "downloader.h"
 #include "utils.h"
 
-int main()
-{
+int main() {
 	DebugMessage("WARNING: Debug mode\n\n");
 
 	Menu menu("Title");
@@ -22,10 +21,11 @@ int main()
 	std::cout << "[+] Website up, proceeding\n";
 
 	std::cout << "[*] Downloading...\n";
-	if (download_file_from_url(FILE_SOURCE, DESTINATION)) {
-		std::cout << "[+] File downloaded and stored in: " << DESTINATION << "\n";
+
+	if (download_file_from_url(FILE_SOURCE, get_path())) {
+		std::cout << "[+] File downloaded and stored in: " << get_path() << "\n";
 		pause_until_leave();
-	}	
+	} 
 	else {
 		std::cout << "[-] Couldn't download file\n";
 		pause_until_leave();

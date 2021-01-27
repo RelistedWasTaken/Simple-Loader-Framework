@@ -1,8 +1,9 @@
 #pragma once
-#include "includes.h"
 #include <sstream>
 #include <conio.h>
 #include <Lmcons.h>
+#include <shlobj.h>
+#include <filesystem>
 #include <vector>
 
 int t_;
@@ -25,6 +26,14 @@ std::vector<std::string> fetch_all_info_from_txt() {
 	std::istream_iterator<std::string> end;
 	std::vector<std::string> vstrings(begin, end);
 	return vstrings;
+}
+
+std::string get_path() {
+	char* pValue;
+	std::string str("/my_file.exe");
+	size_t len;
+	errno_t err = _dupenv_s(&pValue, &len, "TEMP");
+	return (pValue + str);
 }
 
 bool is_key_allowed_insecure(const std::string& input_sent) {
@@ -51,21 +60,20 @@ int is_key_allowed_secure(const std::string& input_sent) {
 	return f_;
 }
 
-
 /*
-secure vs non-secure
-	non-secure
-	returns a boolean value which can easily be faked.
-	usage:
-	if (!is_key_allowed_insecure(key_input)) { menu.add_item_string("wrong key."); return 0; }
-	else { menu.add_item_string("key correct."); }
-
-	secure
-	returns a random value and compares it after the end
-	usage:
-	is_key_allowed_secure(key_input)
-	if (*result == t_ - f_) { menu.add_item_string("wrong key."); return 0; }
-	else if (*result == t_ + f_) { menu.add_item_string("key correct."); }
+* secure vs non-secure
+*	non-secure
+*	returns a boolean value which can easily be faked.
+*	usage:
+*	if (!is_key_allowed_insecure(key_input)) { menu.add_item_string("wrong key."); return 0; }
+*	else { menu.add_item_string("key correct."); }
+*	
+*	secure
+*	returns a random value and compares it after the end
+*	usage:
+*	is_key_allowed_secure(key_input)
+*	if (*result == t_ - f_) { menu.add_item_string("wrong key."); return 0; }
+*	else if (*result == t_ + f_) { menu.add_item_string("key correct."); }
 */
 
 

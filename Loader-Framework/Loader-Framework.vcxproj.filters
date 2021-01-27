@@ -34,5 +34,8 @@
     <ClInclude Include="utils.h">
       <Filter>.h</Filter>
     </ClInclude>
+    <ClInclude Include="xor.h">
+      <Filter>.h</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
