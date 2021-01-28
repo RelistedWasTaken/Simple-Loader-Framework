@@ -1,5 +1,5 @@
 #include "classes.h"
-#define AUTHOR "August"
+#define AUTHOR "relisted"
 #define VERSION "1.0"
 
 Menu::Menu(std::string title) {
