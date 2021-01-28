@@ -46,13 +46,13 @@ you can upload the key in any format, on any website, in any extension.
 I will use <b>1111-3</b> as an example, so i upload a file.txt to my web hosting
 1111-3 written on it, and than call is_key_allowed_insecure() with key_input being a string entered by the user
 
--Example
+- Example
 ```c
 if (!is_key_allowed_insecure(key_input)) { menu.add_item_string("wrong key."); return 0; }
 else { menu.add_item_string("key correct."); }
 ```
 
--Example: 2
+- Example: 2
 ```c
 if (*result == t_ - f_) { menu.add_item_string("wrong key."); return 0; } //you can change the variables in utils.h
 else if (*result == t_ + f_) { menu.add_item_string("key correct."); }
