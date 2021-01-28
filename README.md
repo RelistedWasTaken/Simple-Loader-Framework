@@ -39,7 +39,7 @@ is_key_allowed_insecure() //check if given key is allowed returns true or false
 is_key_allowed_secure() //check if given key is allowed returns and int value ([How To Use - is_key_allowed_secure/insecure](#is_key_allowed))
 ```
 
-#### usage of is_key_allowed_secure/insecure
+#### Usage of is_key_allowed_secure/insecure:
 lets say you need to check whether the user has access to your product or not
 you would need some kind of a serial id from the user trying to download the product
 you can upload the key in any format, on any website, in any extension.
