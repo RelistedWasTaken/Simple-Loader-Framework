@@ -66,6 +66,7 @@ so its harder to backtrace normally.
 ## Directories and Links
 
 All website links/urls can be changed in <b>includes.h</b>
+</br>
 Directories can be changed in <b>utils.h -> get_path()</b>
 
 ## Author
