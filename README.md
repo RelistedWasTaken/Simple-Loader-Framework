@@ -36,7 +36,7 @@ open_app_insecure(DESTINATION, args, b_hidden) //opens a file from destination w
 ping_new(PING_DEST) //ping a website with a given destination (url/ip?)
 ping_old(PING_DEST) //not recommended to use. Does the same as above
 is_key_allowed_insecure() //check if given key is allowed returns true or false
-is_key_allowed_secure() //check if given key is allowed returns and int value ([How To Use - is_key_allowed_secure/insecure](#is_key_allowed))
+is_key_allowed_secure() //check if given key is allowed returns and int value (usage showcase lower)
 ```
 
 #### Usage of is_key_allowed_secure/insecure:
