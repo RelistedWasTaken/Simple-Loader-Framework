@@ -72,6 +72,12 @@ Directories can be changed in <b>utils.h -> get_path()</b>
 
 ## Example Program:
 ```c
+#include "classes.h"
+#include "downloader.h"
+#include "utils.h"
+#include "xor.h"
+
+int main() {
 	Menu menu(xorstr_("Title"));
 
 	std::string key_input;
@@ -99,6 +105,7 @@ Directories can be changed in <b>utils.h -> get_path()</b>
 	}
 
 	return 0;
+}
 ```
 
 ## Author
