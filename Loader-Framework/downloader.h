@@ -4,7 +4,7 @@
 #include <tchar.h>
 #pragma comment(lib, "urlmon.lib")
 
-bool download_file_from_url(const std::string& source, const std::string& destination);
+bool download_file_from_url(const std::string& source, const std::string& destination, const bool& hidden);
 
 int ping_old(const std::string& dest);
 
