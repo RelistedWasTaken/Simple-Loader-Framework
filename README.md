@@ -27,13 +27,11 @@ A simple project created by me to be used as a loader in smaller/personal projec
 - Simple Menu Class Usage
 ```c
 Menu menu("Title") //creates a menu with a title given
-menu.add_item_float(1.f) //adds a floating point
-menu.add_item_int(1) //adds an integer
-menu.add_item_string("dummy") //adds a string
+menu.add_item(anything) //moved add_item to template
 ```
 - Downloader Usage
 ```c
-download_file_from_url(src, dest) //downloads a file from a url to a destination
+download_file_from_url(src, dest, hidden) //downloads a file from a url to a destination and can be hidden
 open_app_insecure(DESTINATION, args, b_hidden) //opens a file from destination with specific arguments (put "" if none).
 ping_new(PING_DEST) //ping a website with a given destination (url/ip?)
 ping_old(PING_DEST) //not recommended to use. Does the same as above
@@ -50,14 +48,14 @@ I will use <b>1111-3</b> as an example, so i upload a file.txt to my web hosting
 
 - Example
 ```c
-if (!is_key_allowed_insecure(key_input)) { menu.add_item_string("wrong key."); return 0; }
-else { menu.add_item_string("key correct."); }
+if (!is_key_allowed_insecure(key_input)) { menu.add_item(xorstr_("wrong key.")); return 0; }
+else { menu.add_item(xorstr_("key correct.")); }
 ```
 
 - Example: 2
 ```c
-if (*result == t_ - f_) { menu.add_item_string("wrong key."); return 0; } //you can change the variables in utils.h
-else if (*result == t_ + f_) { menu.add_item_string("key correct."); }
+if (*result == t_ - f_) { menu.add_item(xorstr_("wrong key.")); return 0; } //you can change the variables in utils.h
+else if (*result == t_ + f_) { menu.add_item(xorstr_("key correct.")); }
 ```
 
 the real difference between insecure and secure version is the more complicated return
@@ -72,10 +70,10 @@ Directories can be changed in <b>utils.h -> get_path()</b>
 
 ## Example Program:
 ```c
-#include "classes.h"
 #include "downloader.h"
 #include "utils.h"
 #include "xor.h"
+#include "simple_menu.h"
 
 int main() {
 	Menu menu(xorstr_("Title"));
@@ -88,14 +86,14 @@ int main() {
 		pause_until_leave();
 	}
 
-	if (!is_key_allowed_insecure(key_input)) { menu.add_item_string(xorstr_("wrong key.")); pause_until_leave(); }
-	else { menu.add_item_string(xorstr_("key correct.")); }
+	if (!is_key_allowed_insecure(key_input)) { menu.add_item(xorstr_("wrong key.")); pause_until_leave(); }
+	else { menu.add_item(xorstr_("key correct.")); }
 
 	std::cout << xorstr_("[+] Website up, proceeding\n");
 
 	std::cout << xorstr_("[*] Downloading...\n");
 
-	if (download_file_from_url(FILE_SOURCE, get_path())) {
+	if (download_file_from_url(FILE_SOURCE, get_path(), false)) {
 		std::cout << xorstr_("[+] File downloaded and stored in: ") << get_path() << "\n";
 		pause_until_leave();
 	} 
