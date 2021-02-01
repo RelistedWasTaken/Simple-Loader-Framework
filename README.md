@@ -44,7 +44,7 @@ lets say you need to check whether the user has access to your product or not
 you would need some kind of a serial id from the user trying to download the product
 you can upload the key in any format, on any website, in any extension.
 I will use <b>1111-3</b> as an example, so i upload a file.txt to my web hosting
-1111-3 written on it, and than call is_key_allowed_insecure() with key_input being a string entered by the user
+with 1111-3 written in it, and than call is_key_allowed_insecure() with key_input being a string entered by the user
 
 - Example
 ```c
