@@ -36,10 +36,9 @@ open_app_insecure(DESTINATION, args, b_hidden) //opens a file from destination w
 ping_new(PING_DEST) //ping a website with a given destination (url/ip?)
 ping_old(PING_DEST) //not recommended to use. Does the same as above
 is_key_allowed_insecure() //check if given key is allowed returns true or false
-is_key_allowed_secure() //check if given key is allowed returns and int value (usage showcase lower)
 ```
 
-#### Usage of is_key_allowed_secure/insecure:
+#### Usage of is_key_allowed/insecure:
 lets say you need to check whether the user has access to your product or not
 you would need some kind of a serial id from the user trying to download the product
 you can upload the key in any format, on any website, in any extension.
@@ -52,8 +51,7 @@ if (!is_key_allowed_insecure(key_input)) { menu.add_item(xorstr_("wrong key."));
 else { menu.add_item(xorstr_("key correct.")); }
 ```
 
-the real difference between insecure and secure version is the more complicated return
-so its harder to backtrace normally.
+is_key_allowed_insecure being a boolean value may be vulnerable to backtracing. Currently working on is_key_allowed_secure().
 
 
 ## Directories and Links
