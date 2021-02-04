@@ -52,12 +52,6 @@ if (!is_key_allowed_insecure(key_input)) { menu.add_item(xorstr_("wrong key."));
 else { menu.add_item(xorstr_("key correct.")); }
 ```
 
-- Example 2
-```c
-if (*result == t_ - f_) { menu.add_item(xorstr_("wrong key.")); return 0; } //you can change the variables in utils.h
-else if (*result == t_ + f_) { menu.add_item(xorstr_("key correct.")); }
-```
-
 the real difference between insecure and secure version is the more complicated return
 so its harder to backtrace normally.
 
