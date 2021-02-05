@@ -24,7 +24,7 @@ A simple project created by me to be used as a loader in smaller/personal projec
 
 ## How To Use
 
-#Compile in <b>C++17</b>
+# Compile in <b>C++17</b>
 
 - Simple Menu Class Usage
 ```c
